@@ -1,0 +1,12 @@
+
+cd \jvDevelopment\repo_maven\mvn\Axis
+
+mvn dependency:copy-dependencies -DoutputDirectory=libs
+
+
+@echo on
+rem
+java -Djava.ext.dirs=libs org.apache.axis.wsdl.WSDL2Java -o working -p com.idc.jv http://hertzservicedemo.rousesales.com/hertzservice.asmx?WSDL
+rem
+rem
+
